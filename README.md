@@ -20,3 +20,15 @@ We prompt the user to enter a non-negative integer using input(), convert it to 
 We then call the digital_root function with the number as an argument and store the result in the variable result.
 Finally, we print the original number and its digital root.
 This code calculates the digital root of a given non-negative integer following the specified algorithm.
+
+```python
+def digital_root(n):
+    while n >= 10:
+        n = sum(int(digit) for digit in str(n))
+    return n
+
+# Example usage:
+number=int(input('Input Your Number My Dear LEGEND: '))
+result=digital_root(number)
+print("Your Input is: ",number,"\nYour Output Is: ",result)
+
